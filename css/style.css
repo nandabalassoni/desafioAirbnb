@@ -4,3 +4,12 @@
   padding-left: 4.5rem;
   padding-right: 4.5rem;
 }
+
+body {
+  font-family:'Montserrat', sans-serif;
+}
+
+#text-rodape {
+  color: #6c757d!important;
+  text-align: center;
+}
