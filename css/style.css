@@ -125,9 +125,9 @@ a.paginate__link:hover { text-decoration: none; }
 
 /* Responsive screen for device up to 1200px */
 @media screen and (min-width: 1200px) {
-  .navbar-brand img { width: 8%;}
   .header__info { 
       font-size: 1.1em; 
       font-weight: 300;
   }
+}
 }
