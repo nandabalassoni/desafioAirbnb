@@ -112,3 +112,61 @@ html += `
 `;
 document.getElementsByClassName("paginate__list")[0].innerHTML = html;
 }
+
+/**
+ * Mostra a quantidade de registro resultantes da busca.
+ * 
+ * @param {number} items número de locações.
+ * @return void
+ */
+function infoHeader(items) {    
+  document.getElementsByClassName("header__amount")[0].innerHTML = `Mais de ${items} acomodações para hospedagem.`;
+}
+
+/**
+* Limpa o conteúdo dos cards.
+* 
+* @return void
+*/
+function clearBoxContent() {
+  document.getElementsByClassName("content")[0].innerHTML = "";
+}
+
+/**
+* Limpa o conteúdo dos links da páginação.
+* 
+* @return void
+*/
+function clearBoxLinkPaginate() {
+  document.getElementsByClassName("paginate__list")[0].innerHTML = "";
+}
+
+/**
+ * Responsável por executar à paginação.
+ * 
+ * @return void
+ */
+function paginate(pageCurrent) { 
+  clearBoxContent();
+  listCards(pagination(dados, pageCurrent));
+
+  clearBoxLinkPaginate();
+  paginateLink(dados, pageCurrent);
+}
+
+function format_number(number, decPlaces, decSep, thouSep) {
+  decPlaces = isNaN(decPlaces = Math.abs(decPlaces)) ? 2 : decPlaces,
+  decSep = typeof decSep === "undefined" ? "." : decSep;
+  thouSep = typeof thouSep === "undefined" ? "," : thouSep;
+  var sign = number < 0 ? "-" : "";
+  var i = String(parseInt(number = Math.abs(Number(number) || 0).toFixed(decPlaces)));
+  var j = (j = i.length) > 3 ? j % 3 : 0;
+
+  return sign +
+      (j ? i.substr(0, j) + thouSep : "") +
+      i.substr(j).replace(/(\decSep{3})(?=\decSep)/g, "$1" + thouSep);
+      // (decPlaces ? decSep + Math.abs(number - i).toFixed(decPlaces).slice(2) : "");
+}
+
+// Carregando as informações da API.
+sendRequestAPI(URL);
