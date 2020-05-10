@@ -34,3 +34,18 @@ body {
 .content__card-image:hover img {
     transform: scale(1.1);
 }
+
+.card-body { padding: 1rem 0; }
+.card-title, .card-text { margin-bottom: 1%; }
+.card-text { font-size: .95em; }
+.card-text strong {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--color-red);
+}
+.card-text span {
+    font-size: .6em;
+    font-weight: 500;
+    color: var(--color-red);
+    vertical-align: top;
+}
