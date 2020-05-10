@@ -101,9 +101,9 @@ a.paginate__link:hover { text-decoration: none; }
 /* Responsive screen for device up to 768px */
 @media screen and (min-width: 768px) {
   .navbar-brand > strong { font-size: 1.6rem; }
-  h3.header__title{ 
+  /*h3.header__title{ 
       font-size: 1.85rem; 
-      font-weight: 600;
+      font-weight: 600;*/
   }
   .header__info { font-size: .8em; }
   h5.card-title { font-size: 1.3em; }
@@ -118,7 +118,7 @@ a.paginate__link:hover { text-decoration: none; }
 /* Responsive screen for device up to 992px */
 @media screen and (min-width: 992px) {
   .header__info { font-size: initial; }
-  h3.header__title { font-size: 1.20rem; }
+  /*h3.header__title { font-size: 1.20rem; }*/
   .card-text { font-size: initial; }
   .card-text strong { 
       font-weight: 700;
