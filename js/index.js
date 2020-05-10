@@ -120,7 +120,7 @@ document.getElementsByClassName("paginate__list")[0].innerHTML = html;
  * @return void
  */
 function infoHeader(items) {    
-  document.getElementsByClassName("header__amount")[0].innerHTML = `Mais de ${items} acomodações para hospedagem.`;
+  document.getElementsByClassName("header__amount")[0].innerHTML = `Aproveite nossas ofertas! Muitas ofertas e acomodações de qualidade te esperando!`;
 }
 
 /**
