@@ -9,14 +9,23 @@ body {
   font-family:'Montserrat', sans-serif;
 }
 
+.container{
+  display: inline;
+}
+
 #text-rodape {
   color: #6c757d!important;
   text-align: center;
 }
 
 #text-header {
-  text-align:center!important;
-  font-size: 22px;
+  text-align: center!important;
+  font-size: 26px;
+  font-weight: bold;
+  border: black 2px solid;
+  height: 57px;
+  border-radius: 10px;
+  padding-top: 6px;
 }
 
 /* Main */
@@ -113,7 +122,7 @@ a.paginate__link:hover { text-decoration: none; }
 /* Responsive screen for device up to 992px */
 @media screen and (min-width: 992px) {
   .header__info { font-size: initial; }
-  h3.header__title { font-size: 1.95rem; }
+  h3.header__title { font-size: 1.20rem; }
   .card-text { font-size: initial; }
   .card-text strong { 
       font-weight: 700;
