@@ -98,6 +98,26 @@ a.paginate__link:hover { text-decoration: none; }
   color: #ff6666;
 }
 
+/*#corpo-site-cards {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0px;
+  margin-left: 2px;
+}*/
+
+div.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* margin-right: -15px; */
+  margin-left: -15px;
+}
+.row{
+  margin-right: 0px;
+}
+
 /* Responsive screen for device up to 768px */
 @media screen and (min-width: 768px) {
   .navbar-brand > strong { font-size: 1.6rem; }
