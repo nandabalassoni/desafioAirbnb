@@ -82,4 +82,33 @@ function paginateLink(items, pageActual = 1) {
       disabledNext = pageActual == totalLink ? "disabled" : "",
       indexProgressBack = pageActual != 1 ? pageActual - 1 : 1;
       indexProgressNext = pageActual != totalLink ? pageActual + 1 : pageActual;
+
+      // Link back
+    html += `
+    <li class="paginate__item ${disabledBack}">
+        <a class="paginate__link" href="javascript:paginate(${indexProgressBack})">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </a>
+    </li>
+`;
+
+// Link pagination
+for (let i=1; i<=totalLink; i++) {
+    let active = pageActual == i ? "active" : "";
+    html += `
+        <li class="paginate__item ${active}">
+            <a class="paginate__link" href="javascript:paginate(${i})">${i}</a>
+        </li>
+    `;
+}
+
+// Link next
+html += `
+    <li class="paginate__item ${disabledNext}">
+        <a class="paginate__link" href="javascript:paginate(${indexProgressNext})">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </a>
+    </li>
+`;
+document.getElementsByClassName("paginate__list")[0].innerHTML = html;
 }
